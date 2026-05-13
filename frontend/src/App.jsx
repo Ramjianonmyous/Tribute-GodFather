@@ -590,7 +590,6 @@ function App() {
               <h4>Credit</h4>
               <ul>
                 <li><span style={{ color: 'var(--fg-muted)', fontSize: '15px' }}>Tribute to Legendary Godfather</span></li>
-                <li><span style={{ color: 'var(--fg-muted)', fontSize: '15px' }}>Styled with Passion</span></li>
                 <li><span style={{ color: 'var(--fg-muted)', fontSize: '15px' }}>Made by Ram Kaithwas</span></li>
                 <li><span style={{ color: 'var(--fg-muted)', fontSize: '15px' }}>AI Assistant: Antigravity</span></li>
               </ul>
