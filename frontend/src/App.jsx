@@ -368,7 +368,7 @@ function App() {
             transition={{ duration: 0.9 }}
             viewport={{ once: true }}
           >
-            <img src={`${apiUrl}/api/images/family`} alt="The Corleone Family" loading="lazy" />
+            <img src={`/images/family.jpg`} alt="The Corleone Family" loading="lazy" />
             <div className="img-overlay"></div>
             <div className="img-year">1945</div>
           </motion.div>
