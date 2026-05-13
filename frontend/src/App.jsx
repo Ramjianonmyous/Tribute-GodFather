@@ -219,11 +219,11 @@ function App() {
       <div id="preloader" className={isLoading ? '' : 'hidden'}>
         <div className="slideshow-container">
           {[
-            `${apiUrl}/api/images/poster1_h`,
-            `${apiUrl}/api/images/poster2_h`,
-            `${apiUrl}/api/images/poster3_h`,
-            `${apiUrl}/api/images/poster4_h`,
-            `${apiUrl}/api/images/poster5_h`
+            `/images/poster1_h.png`,
+            `/images/poster2_h.png`,
+            `/images/poster3_h.png`,
+            `/images/poster4_h.png`,
+            `/images/poster5_h.png`
           ].map((url, index) => (
             <div 
               key={index}
@@ -401,10 +401,10 @@ function App() {
           </div>
 
           {[
-            { year: '1945', title: 'The Wedding Day', desc: 'Inside the Don\'s study, supplicants come to ask for favors on the day no Sicilian can refuse.', img: `${apiUrl}/api/images/wedding` },
-            { year: '1945', title: 'The Assassination Attempt', desc: 'Five bullets tear through the Don\'s body on a street in Little Italy.', img: `${apiUrl}/api/images/assassination` },
-            { year: '1946', title: 'Baptism of Fire', desc: 'In one of cinema\'s most breathtaking sequences, the sacred rite of baptism intercuts with systematic executions.', img: `${apiUrl}/api/images/baptism` },
-            { year: '1958', title: 'The Succession', desc: 'Michael has become what his father never wanted him to be — colder, more calculating, more ruthless.', img: `${apiUrl}/api/images/succession` }
+            { year: '1945', title: 'The Wedding Day', desc: 'Inside the Don\'s study, supplicants come to ask for favors on the day no Sicilian can refuse.', img: `/images/wedding.jpg` },
+            { year: '1945', title: 'The Assassination Attempt', desc: 'Five bullets tear through the Don\'s body on a street in Little Italy.', img: `/images/assassination.png` },
+            { year: '1946', title: 'Baptism of Fire', desc: 'In one of cinema\'s most breathtaking sequences, the sacred rite of baptism intercuts with systematic executions.', img: `/images/baptism.jpg` },
+            { year: '1958', title: 'The Succession', desc: 'Michael has become what his father never wanted him to be — colder, more calculating, more ruthless.', img: `/images/succession.jpg` }
           ].map((item, index) => (
             <motion.div 
               className="timeline-item" 
@@ -439,12 +439,12 @@ function App() {
         </div>
         <div className="characters-grid">
           {[
-            { id: 'vito', name: 'Vito Corleone', role: 'The Don · Patriarch', quote: '"I spent my life trying not to be careless. People who are careless die young."', img: `${apiUrl}/api/images/vito` },
-            { id: 'michael', name: 'Michael Corleone', role: 'The Successor', quote: '"It\'s strictly business, Sonny. It\'s not personal."', img: `${apiUrl}/api/images/michael` },
-            { id: 'sonny', name: 'Sonny Corleone', role: 'Underboss', quote: '"You\'re taking this very personal. Tom, this is business."', img: `${apiUrl}/api/images/sonny` },
-            { id: 'tom', name: 'Tom Hagen', role: 'Consigliere', quote: '"Mr. Corleone is a man who insists on hearing bad news immediately."', img: `${apiUrl}/api/images/tom` },
-            { id: 'fredo', name: 'Fredo Corleone', role: 'Middle Brother', quote: '"I can handle things! I\'m smart! Not like everybody says."', img: `${apiUrl}/api/images/fredo` },
-            { id: 'luca', name: 'Luca Brasi', role: 'Enforcer', quote: '"I am honored and grateful that you have invited me to your home."', img: `${apiUrl}/api/images/luca` }
+            { id: 'vito', name: 'Vito Corleone', role: 'The Don · Patriarch', quote: '"I spent my life trying not to be careless. People who are careless die young."', img: `/images/vito.jpg` },
+            { id: 'michael', name: 'Michael Corleone', role: 'The Successor', quote: '"It\'s strictly business, Sonny. It\'s not personal."', img: `/images/michael.jpg` },
+            { id: 'sonny', name: 'Sonny Corleone', role: 'Underboss', quote: '"You\'re taking this very personal. Tom, this is business."', img: `/images/sonny.jpg` },
+            { id: 'tom', name: 'Tom Hagen', role: 'Consigliere', quote: '"Mr. Corleone is a man who insists on hearing bad news immediately."', img: `/images/tom.jpg` },
+            { id: 'fredo', name: 'Fredo Corleone', role: 'Middle Brother', quote: '"I can handle things! I\'m smart! Not like everybody says."', img: `/images/fredo.jpg` },
+            { id: 'luca', name: 'Luca Brasi', role: 'Enforcer', quote: '"I am honored and grateful that you have invited me to your home."', img: `/images/luca.jpg` }
           ].map((char, index) => (
             <motion.article 
               className="character-card" 
@@ -512,7 +512,7 @@ function App() {
             >
               <video 
                 ref={el => videoRefs.current[index] = el}
-                src={`${apiUrl}/api/videos/${scene.videoName}`}
+                src={`/videos/${scene.videoName}.mp4`}
                 loop
                 preload="auto"
                 style={{ width: '100%', height: '100%', objectFit: 'contain', backgroundColor: '#050504' }}
@@ -592,6 +592,7 @@ function App() {
                 <li><span style={{ color: 'var(--fg-muted)', fontSize: '15px' }}>Tribute to Legendary Godfather</span></li>
                 <li><span style={{ color: 'var(--fg-muted)', fontSize: '15px' }}>Styled with Passion</span></li>
                 <li><span style={{ color: 'var(--fg-muted)', fontSize: '15px' }}>Made by Ram Kaithwas</span></li>
+                <li><span style={{ color: 'var(--fg-muted)', fontSize: '15px' }}>AI Assistant: Antigravity</span></li>
               </ul>
             </div>
           </div>
@@ -630,7 +631,7 @@ function App() {
       {/* Audio Element */}
       <audio 
         ref={themeAudioRef} 
-        src={`${apiUrl}/api/music/theme`} 
+        src={`/music/theme.mp3`} 
         loop 
         style={{ display: 'none' }}
       />
