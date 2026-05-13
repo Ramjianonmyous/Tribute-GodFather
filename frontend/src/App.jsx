@@ -33,7 +33,7 @@ function App() {
   const themeAudioRef = useRef(null);
   const videoRefs = useRef([]);
   
-  const apiUrl = import.meta.env.VITE_API_URL || '';
+  const apiUrl = (import.meta.env.VITE_API_URL || '').replace(/\/$/, '');
 
   useEffect(() => {
     const audio = themeAudioRef.current;
